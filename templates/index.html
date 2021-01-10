@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+ 		<meta charset="utf-8">
+ 		<title>NEW WORK!!</title>
+ 		<link rel="icon" href="https://www.pngrepo.com/png/203226/180/flash-thunder.png">
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style media="screen">
+    .box {
+  border: 1px solid black;
+  background-color: #ccc;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+.line {
+  width: 3px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+}
+
+
+
+.line:after{
+  content: '';
+   position: absolute;
+   left: -6px;
+   top: 100px;
+   width: 15px;
+     height: 15px;
+   -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #d169d5;
+  offset-path: path('M0,0 C40,0 60,160 0,0');
+  animation: bounce 1s infinite alternate ease-in-out;
+
+
+}
+@keyframes bounce {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100px;
+    opacity: 0;
+  }
+
+}
+
+#line1 {
+  top: 120px;
+  left: 250px;
+}
+
+#line2 {
+  top: 220px;
+  left: 150px;
+  height: 115px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+}
+    </style>
+ </head>
+ <body>
+   <div class="container">
+     <h1>flow meta</h1>
+      <div class="cont"></div>
+
+
+<div class="line" id="line222"></div>
+<div class="line" id="line2"></div>
+
+   </div>
+
+
+<script type="text/javascript">
+var data  = [
+  {
+    "Titulo": "Inicio do processo",
+    "box_id":"box1",
+    "style":"top: 20px;left: 400px;",
+    "descricao": "fim",
+    "tempo_total": "19802s",
+    "tempo_levado": "53s"
+  },
+  {
+    "Titulo": "Fim do processo",
+    "box_id":"box2",
+    "style":"  top: 220px;left: 400px;",
+    "descricao": "fim",
+    "tempo_total": "2s",
+    "tempo_levado": "3s"
+  }
+]
+
+
+$.each(data, function(i, item) {
+    $(".cont").append("<div class='box' style='"+data[i]["style"]+"' id='"+data[i]["box_id"]+"'><p>"+data[i]["Titulo"]+"</p></div>")
+});
+//console.log(data);
+</script>
+
+
+
+</body>
+ </html>
